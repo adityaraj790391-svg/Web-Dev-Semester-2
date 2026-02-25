@@ -1,66 +1,47 @@
-/// we can access to individual value by targeting 
-
-/// execution has two phases global execution and functional execution context
-/// global execution is divided into creation and execution phase
-/// functional execution is divided into creation and execution phase
-
-
-var a = 10;
-console.log(a)
-function demo () {
-    let b =20;
-    console.log(b);
-}
-demo();
+// document.getElementById("myinput").addEventListener ("change", (event)=> {
+//     // here event is the synthetic event which comes under addeventlistener callback function. It will prevent the event object which stores all information about the form tag
+//     console.log(event.target.value);
+//     // event.target will print the atrgeted element and event.target.value will print the user input value in the console.
+//     document.getElementById("output").textContent = "Change Detected"
+// })
 
 
-//// CallStack is a process and mechanism which keeps track of every process running in the background or javascript course.
-//// CallStack stores global execution context and functional execution context
-//// After the processing of the code it will pop out the FEC then GEC at the end.
+// let myPromise  = new Promise ((res,rej)=> {
+//     let data = "this is my data";
+//     if(data){
+//        res();
+//     }else{
+//         rej("error: no data found")
+//     }
+// });
 
-
-
-let user =  {
-    FullNmae: "Demon King",
-    address: "Gurugram",
-    mobileno: 123456789,
-    favcolor: ["black", "white"]
-}
-
-console.log(user.FullNmae, user.address, user.mobileno);
-console.log(Object.keys(user));
-console.log(Object.values(user));
-console.log(user.favcolor[1]);
-console.log(Object.entries(user));
-
-
-const car = {
-    make: "Toyota",
-    model: "Thar"
-}
-// Object.freeze(car);
-Object.seal(car);
-car.model = "XEV9E";
-car.color = "Blue";
-console.log(car);
-
-
-//// Object Methods -
-//// The difference between object.freeze and object.seal
-//// What is execution context and how JavaScript code executes in execution context.
-//// What is CallStack and how CallStack works in JavaScript.
-//// Difference between DOM and HTML.
+// myPromise.then((d)=>{
+//     console.log(d);
+// },(e)=>{
+//     console.log(e);
+// });
 
 
 
+// Set Timeout vs Set Interval
+
+// Promise is used to handle ansynchronomous function in a better way than callback hell.
+// Promise has three states - pending, fulfill, and rejected.
+// Promise handling has two consumers - dot then and dot catch.
+// if promise is fulfilled it will go to .then method.
+// if promise is rejected then it will go to .catch.
 
 
-
-
-
-
-
-
+let pro = new Promise ((resolve, reject)=>{
+    let proposal = "false"
+    if(proposal === "true") {
+        resolve()
+    }
+    else {
+        reject()
+    }
+})
+pro.then(()=>console.log("proposal accepted")).catch(()=>console.log("proposal rejected"))
 
 
 
