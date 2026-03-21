@@ -61,5 +61,3 @@ for (let i = 0; i < task5.length; i++){
 
 
 
-
-
